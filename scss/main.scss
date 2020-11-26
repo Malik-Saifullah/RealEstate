@@ -1,0 +1,75 @@
+@import "../vendor/line-awesome/css/line-awesome.min.css";
+
+@import "./vendor/fonts.scss";
+@import "./vendor/mixins.scss";
+@import "./vendor/variables.scss";
+
+
+/*=======================================================
+                    basic styling
+=======================================================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 1366px;
+    }
+}
+
+
+/*=======================================================
+                        header
+=======================================================*/
+#header {}
