@@ -1,4 +1,6 @@
 @import "../vendor/line-awesome/css/line-awesome.min.css";
+@import "../vendor/owlcarousel/css/owl.carousel.min.css";
+@import "../vendor/owlcarousel/css/owl.theme.default.min.css";
 
 @import "./vendor/fonts.scss";
 @import "./vendor/mixins.scss";
@@ -133,3 +135,45 @@ a {
                         header
 =======================================================*/
 #header {}
+
+
+/*=======================================================
+                        banner
+=======================================================*/
+#banner {
+    .banner__content__box {
+        .banner__image_container {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                opacity: .8;
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 45%;
+            width: 100%;
+
+            .owl-prev,
+            .owl-next {
+                background-color: aliceblue;
+                padding: 10px 25px !important;
+                font-size: 26px;
+                line-height: 1.3;
+                font-weight: 700;
+            }
+
+            .owl-prev {
+                float: left;
+            }
+
+            .owl-next {
+                float: right;
+            }
+        }
+    }
+}

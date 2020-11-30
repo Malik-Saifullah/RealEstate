@@ -1,4 +1,6 @@
 @import url(../vendor/line-awesome/css/line-awesome.min.css);
+@import url(../vendor/owlcarousel/css/owl.carousel.min.css);
+@import url(../vendor/owlcarousel/css/owl.theme.default.min.css);
 /*=======================================================
                 reset default styling
 =======================================================*/
@@ -134,3 +136,35 @@ a {
 /*=======================================================
                         header
 =======================================================*/
+/*=======================================================
+                        banner
+=======================================================*/
+#banner .banner__content__box .banner__image_container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#banner .banner__content__box .banner__image_container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .8;
+}
+#banner .banner__content__box .owl-nav {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+#banner .banner__content__box .owl-nav .owl-prev,
+#banner .banner__content__box .owl-nav .owl-next {
+  background-color: aliceblue;
+  padding: 10px 25px !important;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+#banner .banner__content__box .owl-nav .owl-prev {
+  float: left;
+}
+#banner .banner__content__box .owl-nav .owl-next {
+  float: right;
+}
