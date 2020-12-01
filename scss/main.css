@@ -128,9 +128,9 @@ a {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 @media (min-width: 1440px) {
@@ -179,7 +179,6 @@ a {
                 title styling of each section
 =======================================================*/
 .title-box {
-  margin-bottom: 65px;
   position: relative;
   padding-left: 35px;
 }
@@ -319,22 +318,114 @@ a {
   background-color: #2e2e2e;
   padding: 128px 0 80px;
 }
+#recent-property-ads .title-box,
+#commercial-property-ads .title-box,
+#residential-property-ads .title-box {
+  margin-bottom: 65px;
+}
 
 /*=======================================================
                     about section
 =======================================================*/
 #about {
-  position: relative;
-  background-color: #777777;
+  background: #2A2A2A;
   padding: 128px 0 70px;
 }
-#about::before {
+#about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#about .container .about__col--left,
+#about .container .about__col--right {
+  width: 50%;
+}
+#about .container .about__col--left {
+  padding-right: 50px;
+}
+#about .container .about__col--left .title-box {
+  margin-bottom: 45px;
+}
+#about .container .about__col--left .about__info__box .about__desc {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+#about .container .about__col--left .about__info__box .property-feature {
+  width: 50%;
+  float: left;
+}
+#about .container .about__col--left .about__info__box .property-feature svg {
+  width: 50px;
+  float: left;
+}
+#about .container .about__col--left .about__info__box .property-feature .feature__info_box {
+  padding: 0 30px 35px 75px;
+}
+#about .container .about__col--left .about__info__box .property-feature .feature__info_box .property__feature__title {
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+#about .container .about__col--left .about__info__box .property-feature .feature__info_box .property__feature__info {
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 400;
+}
+#about .container .about__col--right {
+  position: relative;
+}
+#about .container .about__col--right::before {
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #222222;
-  opacity: 0.90;
+  left: -30px;
+  top: -30px;
   content: "";
+  border: 1px solid #00c0ff;
+  width: 100%;
+  height: 100%;
+}
+#about .container .about__col--right::after {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  content: "";
+  border: 1px solid #ffffff;
+  width: 100%;
+  height: 100%;
+}
+#about .container .about__col--right .about__video__box {
+  position: relative;
+  z-index: 999;
+}
+#about .container .about__col--right .about__video__box .play-now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+#about .container .about__col--right .about__video__box .play-now i {
+  font-size: 30px;
+  color: #ffffff;
+  background: #00c0ff;
+  padding: 20px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
