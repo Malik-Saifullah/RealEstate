@@ -16,6 +16,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    // text-rendering: optimizeSpeed;
 
     /* Remove all animations and transitions for people that prefer not to see them */
     @media (prefers-reduced-motion: reduce) {
@@ -232,107 +233,142 @@ a {
 }
 
 
+
 /*=======================================================
-                property adds section
+                property adds card
 =======================================================*/
-#property-ads {
-    background-color: $bgTheme;
-    padding: 128px 0 80px;
+.property-ads-outer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    .container {
-        .property-ads-outer-container {
+    .property-ads-inner-container {
+        // width: 100%;
+        max-width: 370px;
+        padding: 15px;
 
-            .property-ads-inner-container {
-                width: 370px;
-                min-width: 370px;
+        .property-images {}
 
-                .property-images {}
+        .property-desc-box {
+            padding: 20px 0 0;
+            display: inline-block;
 
-                .property-desc-box {
-                    padding: 20px 0 0;
-                    display: inline-block;
+            .property-title {
+                color: $colorWhite;
+                font-size: 24px;
+                line-height: 1.3;
+                font-weight: 700;
+                margin-bottom: 7px;
+                text-transform: capitalize;
+            }
 
-                    .property-title {
+            .property-address {
+                margin-bottom: 17px;
+
+                i {
+                    color: $colorActive;
+                    margin-right: 4px;
+                    font-size: 18px;
+                }
+
+                span {
+                    color: $colorWhite;
+                    font-size: 14px;
+                    line-height: 1.3;
+                    font-weight: 700;
+                    margin-bottom: 7px;
+                }
+            }
+
+            .properties-info {
+                li {
+                    width: 50%;
+                    float: left;
+                    display: flex;
+                    align-items: self-end;
+                    margin-bottom: 15px;
+
+                    svg {
+                        color: $colorActive;
+                        width: 24px;
+                    }
+
+                    span {
                         color: $colorWhite;
-                        font-size: 24px;
-                        line-height: 1.3;
-                        font-weight: 700;
-                        margin-bottom: 7px;
-                        text-transform: capitalize;
-                    }
-
-                    .property-address {
-                        i {
-                            color: $colorActive;
-                            margin-right: 4px;
-                            font-size: 18px;
-                        }
-
-                        span {
-                            color: $colorWhite;
-                            font-size: 14px;
-                            line-height: 1.3;
-                            font-weight: 700;
-                            margin-bottom: 7px;
-                        }
-                    }
-
-                    .properties-info {
-                        li {
-                            width: 50%;
-                            float: left;
-
-                            i {
-                                color: $colorActive;
-                                font-size: 24px;
-                            }
-
-                            span {
-                                color: $colorWhite;
-                                font-size: 14px;
-                                line-height: 45px;
-                                font-weight: 400;
-                                padding-left: 45px;
-                                margin-bottom: 7px;
-                            }
-                        }
-                    }
-
-                    .property-btn-box {
-
-                        // display: flex;
-                        a,
-                        span {
-                            float: left;
-                            text-align: center;
-                            color: $colorWhite;
-                            font-size: 15px;
-                            line-height: 20px;
-                            font-weight: 700;
-                            padding: 10px;
-                        }
-
-                        a {
-                            width: 50%;
-                            background: $bgBtnAction;
-                            transition: all .3s ease-in-out;
-                            -webkit-transition: all .3s ease-in-out;
-                            -moz-transition: all .3s ease-in-out;
-                            -ms-transition: all .3s ease-in-out;
-                            -o-transition: all .3s ease-in-out;
-
-                            &:hover {
-                                background: $colorActive;
-                            }
-                        }
-
-                        span {
-                            width: 50%;
-                            background: $bgBtnPrice;
-                        }
+                        font-size: 14px;
+                        line-height: 30px;
+                        font-weight: 400;
+                        padding-left: 30px;
+                        // margin-bottom: 7px;
                     }
                 }
             }
+
+            .property-btn-box {
+
+                // display: flex;
+                a,
+                span {
+                    float: left;
+                    text-align: center;
+                    color: $colorWhite;
+                    font-size: 15px;
+                    line-height: 20px;
+                    font-weight: 700;
+                    padding: 10px;
+                }
+
+                a {
+                    width: 50%;
+                    background: $bgBtnAction;
+                    transition: all .3s ease-in-out;
+                    -webkit-transition: all .3s ease-in-out;
+                    -moz-transition: all .3s ease-in-out;
+                    -ms-transition: all .3s ease-in-out;
+                    -o-transition: all .3s ease-in-out;
+
+                    &:hover {
+                        background: $colorActive;
+                    }
+                }
+
+                span {
+                    width: 50%;
+                    background: $bgBtnPrice;
+                }
+            }
         }
+    }
+}
+
+
+/*=======================================================
+                property adds section
+=======================================================*/
+#recent-property-ads,
+#commercial-property-ads,
+#residential-property-ads {
+    background-color: $bgTheme;
+    padding: 128px 0 80px;
+}
+
+
+/*=======================================================
+                    about section
+=======================================================*/
+#about {
+    position: relative;
+    background-color: $bgAboutSection;
+    padding: 128px 0 70px;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #222222;
+        opacity: 0.90;
+        content: "";
     }
 }
