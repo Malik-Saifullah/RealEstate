@@ -104,6 +104,11 @@ ul {
     list-style: none;
 }
 
+figure,
+img {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
 }
@@ -346,7 +351,9 @@ a {
 =======================================================*/
 #recent-property-ads,
 #commercial-property-ads,
-#residential-property-ads {
+#residential-property-ads,
+#popular-places,
+#agents {
     .title-box {
         margin-bottom: 65px;
     }
@@ -371,12 +378,16 @@ a {
 
         .about__col--left,
         .about__col--right {
-            width: 50%;
+            width: 100%;
+
+            @media screen and (min-width: 992px) {
+                width: 50%;
+            }
         }
 
         .about__col--left {
             // margin-right: 10px;
-            padding-right: 50px;
+            padding-right: 10px;
 
             .title-box {
                 margin-bottom: 45px;
@@ -392,8 +403,17 @@ a {
                 }
 
                 .property-feature {
-                    width: 50%;
-                    float: left;
+                    width: 100%;
+
+                    @media screen and (min-width: 768px) {
+                        width: 50%;
+                        float: left;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        width: 50%;
+                        float: left;
+                    }
 
                     svg {
                         width: 50px;
@@ -424,44 +444,56 @@ a {
         }
 
         .about__col--right {
-            position: relative;
+
+            // position: relative;
             // margin-left: 50px;
+            padding: 30px 25px;
 
-            &::before {
-                position: absolute;
-                left: -30px;
-                top: -30px;
-                content: "";
-                border: 1px solid $colorActive;
-                width: 100%;
-                height: 100%;
-            }
-
-            &::after {
-                position: absolute;
-                right: -30px;
-                bottom: -30px;
-                content: "";
-                border: 1px solid $colorWhite;
-                width: 100%;
-                height: 100%;
+            @media screen and (min-width: 992px) {
+                padding-left: 50px;
             }
 
             .about__video__box {
                 position: relative;
-                z-index: 999;
+
+                &::before {
+                    position: absolute;
+                    left: -20px;
+                    top: -20px;
+                    content: "";
+                    border: 1px solid $colorActive;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &::after {
+                    position: absolute;
+                    right: -20px;
+                    bottom: -20px;
+                    content: "";
+                    border: 1px solid $colorWhite;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                figure {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 999;
+                }
 
                 .play-now {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    -webkit-transform: translate(-50%, -50%);
-                    -moz-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    -o-transform: translate(-50%, -50%);
-
                     i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -webkit-transform: translate(-50%, -50%);
+                        -moz-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        -o-transform: translate(-50%, -50%);
+                        z-index: 9999;
                         font-size: 30px;
                         color: $colorWhite;
                         background: $colorActive;
@@ -473,6 +505,212 @@ a {
                         -o-border-radius: 100px;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                popular-places section
+=======================================================*/
+#popular-places {
+    .container {
+        .popular-places-container {
+            // display: flex;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+
+            @media screen and (min-width:768px) {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10px;
+                row-gap: 10px;
+            }
+
+            .popular__places__box {
+                position: relative;
+                // width: fit-content;
+                // margin: 5px;
+
+                .popular__places__img__box {
+                    img {}
+                }
+
+                .popular__places__content__box {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 999999;
+                    width: 100%;
+                    height: 100%;
+
+                    &:hover {
+                        background: rgba($color: $colorActive, $alpha: .6);
+
+                        .popular__places__content__box__inner {
+                            .popular__places__link__box {
+                                visibility: visible;
+
+                                .popular__places__link {
+                                    &::before {
+                                        width: 50px;
+                                    }
+
+                                    &::after {
+                                        width: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .popular__places__content__box__inner {
+                        position: relative;
+                        padding: 20px 25px;
+                        width: 100%;
+                        height: 100%;
+
+
+                        .popular__places__name,
+                        .popular__places__link {
+                            color: $colorWhite;
+                        }
+
+                        .popular__places__name {
+                            font-size: 30px;
+                            line-height: 1.2em;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                        }
+
+                        .popular__places__link__box {
+                            position: absolute;
+                            bottom: 20px;
+                            right: 25px;
+                            visibility: hidden;
+
+                            .popular__places__link {
+                                position: relative;
+                                display: inline-block;
+                                font-size: 16px;
+                                line-height: 26px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                -webkit-transition: all 300ms ease;
+                                -moz-transition: all 300ms ease;
+                                -ms-transition: all 300ms ease;
+                                -o-transition: all 300ms ease;
+                                transition: all 300ms ease;
+
+                                &::before {
+                                    position: absolute;
+                                    top: 7px;
+                                    right: 100%;
+                                    width: 0px;
+                                    height: 4px;
+                                    background: $colorWhite;
+                                    content: '';
+                                    margin-right: 12px;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    top: 16px;
+                                    right: 100%;
+                                    width: 0px;
+                                    height: 2px;
+                                    background: $colorWhite;
+                                    content: '';
+                                    margin-right: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .inner_popular__places__box {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+
+                @media screen and (min-width:768px) {
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 10px;
+                    row-gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                call-to-action section
+=======================================================*/
+#call-to-action {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 120px 0;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #222222;
+        content: "";
+        opacity: 0.90;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            justify-content: space-between;
+        }
+
+        .call-to-action__box {
+            .call-to-action__submit__btn {
+                background-color: transparent;
+                margin-right: 30px;
+                border: 2px solid $colorWhite;
+
+                &:hover {
+                    color: $colorActive;
+                    background: $colorWhite;
+                }
+            }
+
+            .call-to-action__browse__btn {
+                background: $bgBtnAction;
+                border: 2px solid $bgBtnAction;
+
+                &:hover {
+                    background: $colorBlack;
+                }
+            }
+
+            .call-to-action__submit__btn,
+            .call-to-action__browse__btn {
+                position: relative;
+                font-size: 14px;
+                line-height: 20px;
+                color: $colorWhite;
+                padding: 13px 23px;
+                font-weight: 700;
+                text-transform: uppercase;
+                -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+                -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+                -ms-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+                -o-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+                box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
             }
         }
     }

@@ -102,6 +102,11 @@ ul {
   list-style: none;
 }
 
+figure,
+img {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -314,13 +319,17 @@ a {
 =======================================================*/
 #recent-property-ads,
 #commercial-property-ads,
-#residential-property-ads {
+#residential-property-ads,
+#popular-places,
+#agents {
   background-color: #2e2e2e;
   padding: 128px 0 80px;
 }
 #recent-property-ads .title-box,
 #commercial-property-ads .title-box,
-#residential-property-ads .title-box {
+#residential-property-ads .title-box,
+#popular-places .title-box,
+#agents .title-box {
   margin-bottom: 65px;
 }
 
@@ -343,10 +352,16 @@ a {
 }
 #about .container .about__col--left,
 #about .container .about__col--right {
-  width: 50%;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  #about .container .about__col--left,
+  #about .container .about__col--right {
+    width: 50%;
+  }
 }
 #about .container .about__col--left {
-  padding-right: 50px;
+  padding-right: 10px;
 }
 #about .container .about__col--left .title-box {
   margin-bottom: 45px;
@@ -359,8 +374,19 @@ a {
   margin-bottom: 50px;
 }
 #about .container .about__col--left .about__info__box .property-feature {
-  width: 50%;
-  float: left;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  #about .container .about__col--left .about__info__box .property-feature {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  #about .container .about__col--left .about__info__box .property-feature {
+    width: 50%;
+    float: left;
+  }
 }
 #about .container .about__col--left .about__info__box .property-feature svg {
   width: 50px;
@@ -384,31 +410,41 @@ a {
   font-weight: 400;
 }
 #about .container .about__col--right {
+  padding: 30px 25px;
+}
+@media screen and (min-width: 992px) {
+  #about .container .about__col--right {
+    padding-left: 50px;
+  }
+}
+#about .container .about__col--right .about__video__box {
   position: relative;
 }
-#about .container .about__col--right::before {
+#about .container .about__col--right .about__video__box::before {
   position: absolute;
-  left: -30px;
-  top: -30px;
+  left: -20px;
+  top: -20px;
   content: "";
   border: 1px solid #00c0ff;
   width: 100%;
   height: 100%;
 }
-#about .container .about__col--right::after {
+#about .container .about__col--right .about__video__box::after {
   position: absolute;
-  right: -30px;
-  bottom: -30px;
+  right: -20px;
+  bottom: -20px;
   content: "";
   border: 1px solid #ffffff;
   width: 100%;
   height: 100%;
 }
-#about .container .about__col--right .about__video__box {
+#about .container .about__col--right .about__video__box figure {
   position: relative;
+  width: 100%;
+  height: 100%;
   z-index: 999;
 }
-#about .container .about__col--right .about__video__box .play-now {
+#about .container .about__col--right .about__video__box .play-now i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -417,8 +453,7 @@ a {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-}
-#about .container .about__col--right .about__video__box .play-now i {
+  z-index: 9999;
   font-size: 30px;
   color: #ffffff;
   background: #00c0ff;
@@ -428,4 +463,175 @@ a {
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
+}
+
+/*=======================================================
+                popular-places section
+=======================================================*/
+#popular-places .container .popular-places-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  #popular-places .container .popular-places-container {
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+#popular-places .container .popular-places-container .popular__places__box {
+  position: relative;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box:hover {
+  background: rgba(0, 192, 255, 0.6);
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box:hover .popular__places__content__box__inner .popular__places__link__box {
+  visibility: visible;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box:hover .popular__places__content__box__inner .popular__places__link__box .popular__places__link::before {
+  width: 50px;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box:hover .popular__places__content__box__inner .popular__places__link__box .popular__places__link::after {
+  width: 25px;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner {
+  position: relative;
+  padding: 20px 25px;
+  width: 100%;
+  height: 100%;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__name,
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__link {
+  color: #ffffff;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__name {
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__link__box {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  visibility: hidden;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__link__box .popular__places__link {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__link__box .popular__places__link::before {
+  position: absolute;
+  top: 7px;
+  right: 100%;
+  width: 0px;
+  height: 4px;
+  background: #ffffff;
+  content: '';
+  margin-right: 12px;
+}
+#popular-places .container .popular-places-container .popular__places__box .popular__places__content__box .popular__places__content__box__inner .popular__places__link__box .popular__places__link::after {
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  width: 0px;
+  height: 2px;
+  background: #ffffff;
+  content: '';
+  margin-right: 12px;
+}
+#popular-places .container .popular-places-container .inner_popular__places__box {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  #popular-places .container .popular-places-container .inner_popular__places__box {
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+
+/*=======================================================
+                call-to-action section
+=======================================================*/
+#call-to-action {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 120px 0;
+}
+#call-to-action::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  content: "";
+  opacity: 0.90;
+}
+#call-to-action .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  #call-to-action .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+#call-to-action .container .call-to-action__box .call-to-action__submit__btn {
+  background-color: transparent;
+  margin-right: 30px;
+  border: 2px solid #ffffff;
+}
+#call-to-action .container .call-to-action__box .call-to-action__submit__btn:hover {
+  color: #00c0ff;
+  background: #ffffff;
+}
+#call-to-action .container .call-to-action__box .call-to-action__browse__btn {
+  background: #2f4f4f;
+  border: 2px solid #2f4f4f;
+}
+#call-to-action .container .call-to-action__box .call-to-action__browse__btn:hover {
+  background: #272727;
+}
+#call-to-action .container .call-to-action__box .call-to-action__submit__btn,
+#call-to-action .container .call-to-action__box .call-to-action__browse__btn {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 13px 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+  -ms-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 0px 0px 0px inset;
 }
