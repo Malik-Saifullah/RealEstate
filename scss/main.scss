@@ -924,11 +924,29 @@ a {
         }
 
         .footer-middle {
+            position: relative;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #555555;
             display: flex;
             justify-content: space-between;
 
+            &::after {
+                position: absolute;
+                content: "";
+
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-wrap: wrap;
+            }
+
             .footer-middle__cities,
             .footer-middle__get__in__touch {
+                @media screen and (max-width: 600px) {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+
                 .footer-middle__title {
                     color: $colorWhite;
                     font-size: 18px;
@@ -942,6 +960,7 @@ a {
             .footer-middle__cities {
                 .cities__list__box {
                     max-width: 320px;
+                    min-width: 260px;
 
                     ul {
                         li {
@@ -970,16 +989,13 @@ a {
                                 }
                             }
 
-                            &::before {
+                            i {
                                 position: absolute;
                                 left: -3px;
                                 top: 0;
                                 font-size: 16px;
                                 line-height: 20px;
                                 color: #00c0ff;
-                                font-weight: 400;
-                                content: "\f10e";
-                                font-family: "LineAwesome";
                             }
                         }
                     }
@@ -987,6 +1003,7 @@ a {
             }
 
             .footer-middle__get__in__touch {
+                min-width: 275px;
                 max-width: 470px;
 
                 ul {
@@ -1024,6 +1041,45 @@ a {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .footer-bottom {
+            position: relative;
+            padding: 40px 0;
+
+            .back-to-top {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                right: 0;
+                text-align: center;
+
+                span {
+                    cursor: pointer;
+                    padding: 7px;
+                    background: $colorActive;
+                    -webkit-transition: all 300ms ease;
+                    -ms-transition: all 300ms ease;
+                    -o-transition: all 300ms ease;
+                    -moz-transition: all 300ms ease;
+                    transition: all 300ms ease;
+
+                    &:hover {
+                        background: $colorWhite;
+                    }
+                }
+            }
+
+            .copyright-text {
+                color: $colorWhite;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+
+                a {
+                    color: $colorActive;
                 }
             }
         }

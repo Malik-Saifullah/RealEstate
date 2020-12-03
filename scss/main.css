@@ -796,12 +796,32 @@ a {
   transition: all 300ms ease;
 }
 #footer .container .footer-middle {
+  position: relative;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #555555;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+#footer .container .footer-middle::after {
+  position: absolute;
+  content: "";
+}
+@media screen and (max-width: 600px) {
+  #footer .container .footer-middle {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  #footer .container .footer-middle .footer-middle__cities,
+  #footer .container .footer-middle .footer-middle__get__in__touch {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 #footer .container .footer-middle .footer-middle__cities .footer-middle__title,
 #footer .container .footer-middle .footer-middle__get__in__touch .footer-middle__title {
@@ -814,6 +834,7 @@ a {
 }
 #footer .container .footer-middle .footer-middle__cities .cities__list__box {
   max-width: 320px;
+  min-width: 260px;
 }
 #footer .container .footer-middle .footer-middle__cities .cities__list__box ul li {
   position: relative;
@@ -836,18 +857,16 @@ a {
 #footer .container .footer-middle .footer-middle__cities .cities__list__box ul li a:hover {
   color: #00c0ff;
 }
-#footer .container .footer-middle .footer-middle__cities .cities__list__box ul li::before {
+#footer .container .footer-middle .footer-middle__cities .cities__list__box ul li i {
   position: absolute;
   left: -3px;
   top: 0;
   font-size: 16px;
   line-height: 20px;
   color: #00c0ff;
-  font-weight: 400;
-  content: "\f10e";
-  font-family: "LineAwesome";
 }
 #footer .container .footer-middle .footer-middle__get__in__touch {
+  min-width: 275px;
   max-width: 470px;
 }
 #footer .container .footer-middle .footer-middle__get__in__touch ul li {
@@ -876,5 +895,35 @@ a {
   transition: all 200ms ease;
 }
 #footer .container .footer-middle .footer-middle__get__in__touch ul li a:hover {
+  color: #00c0ff;
+}
+#footer .container .footer-bottom {
+  position: relative;
+  padding: 40px 0;
+}
+#footer .container .footer-bottom .back-to-top {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+#footer .container .footer-bottom .back-to-top span {
+  cursor: pointer;
+  padding: 7px;
+  background: #00c0ff;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+#footer .container .footer-bottom .back-to-top span:hover {
+  background: #ffffff;
+}
+#footer .container .footer-bottom .copyright-text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+#footer .container .footer-bottom .copyright-text a {
   color: #00c0ff;
 }
