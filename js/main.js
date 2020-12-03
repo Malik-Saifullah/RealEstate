@@ -13,8 +13,8 @@ $('.agents__slider').owlCarousel({
     loop: true,
     nav: true,
     dots: false,
-    autoplay: true,
-    autoplayTimeout: 2300,
+    // autoplay: true,
+    // autoplayTimeout: 2300,
     responsive:{
         0:{
             items:1

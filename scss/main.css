@@ -652,10 +652,10 @@ a {
 #agents .container .agents__slider .agent__list .agent__img__box {
   position: relative;
 }
-#agents .container .agents__slider .agent__list .agent__img__box a {
+#agents .container .agents__slider .agent__list .agent__img__box .agent__img__container {
   width: 100%;
 }
-#agents .container .agents__slider .agent__list .agent__img__box a::before {
+#agents .container .agents__slider .agent__list .agent__img__box .agent__img__container::before {
   position: absolute;
   right: -20px;
   top: -20px;
@@ -664,23 +664,28 @@ a {
   border: 1px solid #00c0ff;
   content: "";
 }
-#agents .container .agents__slider .agent__list .agent__img__box a img {
+#agents .container .agents__slider .agent__list .agent__img__box .agent__img__container img {
   position: relative;
 }
 #agents .container .agents__slider .agent__list .agent__img__box .agent__social__links {
   position: absolute;
-  left: 15px;
+  left: -30px;
   top: 65px;
   overflow: hidden;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 #agents .container .agents__slider .agent__list .agent__img__box .agent__social__links li {
-  position: relative;
-  display: block;
-  left: 50px;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
+  transform: translateX(100px);
+  transition: 0.2s;
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 #agents .container .agents__slider .agent__list .agent__img__box .agent__social__links li a {
   position: relative;
@@ -691,6 +696,54 @@ a {
   font-weight: 400;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+}
+#agents .container .agents__slider .agent__list .agent__img__box .agent__social__links li a i:hover {
+  color: #00c0ff;
+}
+#agents .container .agents__slider .agent__list .agent__img__box:hover .agent__social__links li:nth-child(1) {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transition-delay: 0.0s;
+          transition-delay: 0.0s;
+}
+#agents .container .agents__slider .agent__list .agent__img__box:hover .agent__social__links li:nth-child(2) {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+#agents .container .agents__slider .agent__list .agent__img__box:hover .agent__social__links li:nth-child(3) {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+#agents .container .agents__slider .agent__list .agent__img__box:hover .agent__social__links li:nth-child(4) {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+#agents .container .agents__slider .agent__list .agent__img__box:hover .agent__social__links li:nth-child(5) {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 #agents .container .agents__slider .agent__list .agent__info__box {
   position: relative;
@@ -709,6 +762,9 @@ a {
   padding-right: 20px;
   margin-right: 10px;
   text-transform: capitalize;
+}
+#agents .container .agents__slider .agent__list .agent__info__box a:hover {
+  color: #222222;
 }
 #agents .container .agents__slider .agent__list .agent__info__box a::after {
   position: absolute;
