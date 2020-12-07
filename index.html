@@ -17,7 +17,60 @@
 
         <!-- header -->
         <header id="header">
-            <div class="header-sticky"></div>
+            <div class="sticky-header">
+                <div class="btn-submit-property-box">
+                    <div class="container">
+                        <a href="#">Submit Property</a>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="container">
+                        <div class="brand">
+                            <a href="#!">
+                                <img src="./images/2.png" alt="">
+                            </a>
+                        </div>
+                        <nav>
+                            <div class="nav-mobile">
+                                <a id="nav-toggle" href="#!">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <ul class="nav-list">
+                                <li>
+                                    <a href="#!">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#!">About</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Agents</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Properties</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Files</a>
+                                    <ul class="nav-dropdown">
+                                        <li>
+                                            <a href="#!">All Files</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Transfer Document</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#!">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- main -->
@@ -34,6 +87,132 @@
                     </div>
                     <div class="banner__image_container">
                         <img src="./images/main3.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section id="property-filter">
+                <div class="property-btn-controll">
+                    <div class="container">
+                        <ul class="tab-buttons">
+                            <li class="tab-btn btn-sale selected">Sale</li>
+                            <li class="tab-btn btn-rent">Rent</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="property-content-box">
+                    <div class="container">
+                        <form action="" id="sale-form-container">
+                            <div class="form-group">
+                                <label for="city">city</label>
+                                <select class="city-select-box" name="city">
+                                    <option>DHA Lahore</option>
+                                    <option>DHA Raya(Lahore)</option>
+                                    <option>DHA Multan</option>
+                                    <option>DHA Bahawalpur</option>
+                                    <option>DHA Gujranwala</option>
+                                    <option>DHA Peshawar</option>
+                                    <option>DHA Quetta</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <select name="category">
+                                    <option value="">Category</option>
+                                    <option value="Homes">Homes</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Appartment">Appartment</option>
+                                    <option value="Plots">Plots</option>
+                                    <option value="Farm House">Farm House</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Property Type</label>
+                                <select id="status" name="type">
+                                    <option>Property Type</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label id="phase">Phase</label>
+                                <input type="text" placeholder="Phase" name="phase" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="bedroom">Bedroom</label>
+                                <input type="text" placeholder="Bedroom" name="bedroom" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="price-form">Price from</label>
+                                <input type="text" placeholder="Price From" name="price-form" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="price-to">Price To</label>
+                                <input type="text" placeholder="Price To" name="price-to" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Search">
+                            </div>
+                        </form>
+                        <form action="" id="rent-form-container">
+                            <div class="form-group">
+                                <label for="city">city</label>
+                                <select class="city-select-box" name="city">
+                                    <option>DHA Lahore</option>
+                                    <option>DHA Raya(Lahore)</option>
+                                    <option>DHA Multan</option>
+                                    <option>DHA Bahawalpur</option>
+                                    <option>DHA Gujranwala</option>
+                                    <option>DHA Peshawar</option>
+                                    <option>DHA Quetta</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <select name="category">
+                                    <option value="">Category</option>
+                                    <option value="Homes">Homes</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Appartment">Appartment</option>
+                                    <option value="Plots">Plots</option>
+                                    <option value="Farm House">Farm House</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Property Type</label>
+                                <select id="status" name="type">
+                                    <option>Property Type</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label id="phase">Phase</label>
+                                <input type="text" placeholder="Phase" name="phase" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="bedroom">Bedroom</label>
+                                <input type="text" placeholder="Bedroom" name="bedroom" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="price-form">Price from</label>
+                                <input type="text" placeholder="Price From" name="price-form" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="price-to">Price To</label>
+                                <input type="text" placeholder="Price To" name="price-to" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">city</label>
+                                <select class="custom-select-box" name="unit" placeholder="Unit" required="">
+                                    <option>Unit</option>
+                                    <option>Square Feet</option>
+                                    <option>Square Yards</option>
+                                    <option>Square Meters</option>
+                                    <option>Marla</option>
+                                    <option>Kanal</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="width:100%;">
+                                <input type="submit" value="Search">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
