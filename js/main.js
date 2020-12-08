@@ -1,3 +1,15 @@
+//Hide Loading Box (Preloader)
+function handlePreloader() {
+    if ($('.preloader').length) {
+        $('.preloader').delay(200).fadeOut(500);
+    }
+}
+$(window).on('load', function () {
+    handlePreloader();
+});
+
+
+
 $(function () { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
     $('nav ul li a:not(:only-child)').click(function (e) {
