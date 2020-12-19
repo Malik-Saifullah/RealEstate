@@ -2,6 +2,7 @@
 @import url(../vendor/line-awesome/css/line-awesome.min.css);
 @import url(../vendor/owlcarousel/css/owl.carousel.min.css);
 @import url(../vendor/owlcarousel/css/owl.theme.default.min.css);
+@import url(../vendor/quickview/css/jquery_image_quickview.css);
 /*=======================================================
                 reset default styling
 =======================================================*/
@@ -577,7 +578,7 @@ a {
 #header .sticky-header {
   position: fixed;
   top: 0;
-  z-index: 999999;
+  z-index: 999999999;
   background: #2e2e2e;
   width: 100%;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -1598,6 +1599,12 @@ a {
   margin-right: 30px;
   border: 2px solid #ffffff;
 }
+@media screen and (max-width: 992px) {
+  #call-to-action .container .call-to-action__box .call-to-action__submit__btn {
+    display: block;
+    margin: 50px auto;
+  }
+}
 #call-to-action .container .call-to-action__box .call-to-action__submit__btn:hover {
   color: #00c0ff;
   background: #ffffff;
@@ -1605,6 +1612,12 @@ a {
 #call-to-action .container .call-to-action__box .call-to-action__browse__btn {
   background: #2f4f4f;
   border: 2px solid #2f4f4f;
+}
+@media screen and (max-width: 992px) {
+  #call-to-action .container .call-to-action__box .call-to-action__browse__btn {
+    display: block;
+    margin: auto;
+  }
 }
 #call-to-action .container .call-to-action__box .call-to-action__browse__btn:hover {
   background: #272727;
@@ -1719,6 +1732,11 @@ a {
   border: 1px solid #d7d7d7;
   padding: 35px 35px 45px;
 }
+@media screen and (max-width: 768px) {
+  #services-section .container .services-section-feature-container .service-block .inner-box {
+    padding: 45px 35px;
+  }
+}
 #services-section .container .services-section-feature-container .service-block .inner-box:hover .icon-box:before {
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -1735,7 +1753,7 @@ a {
   text-align: center;
   fill: #00c0ff;
   border: 1px solid #d7d7d7;
-  background-color: #ffffff;
+  background-color: #222222;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition: all 300ms ease;
@@ -1748,7 +1766,7 @@ a {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #222222;
+  background-color: #ffffff;
   content: "";
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -1760,6 +1778,11 @@ a {
   display: inline-block;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+@media screen and (max-width: 500px) {
+  #services-section .container .services-section-feature-container .service-block .inner-box h4 {
+    margin-top: 10px;
+  }
 }
 #services-section .container .services-section-feature-container .service-block .inner-box h4 a {
   display: block;

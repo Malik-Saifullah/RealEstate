@@ -1,6 +1,7 @@
 @import "../vendor/line-awesome/css/line-awesome.min.css";
 @import "../vendor/owlcarousel/css/owl.carousel.min.css";
 @import "../vendor/owlcarousel/css/owl.theme.default.min.css";
+@import "../vendor/quickview/css/jquery_image_quickview.css";
 
 @import "./vendor/fonts.scss";
 @import "./vendor/mixins.scss";
@@ -619,7 +620,7 @@ a {
     .sticky-header {
         position: fixed;
         top: 0;
-        z-index: 999999;
+        z-index: 999999999;
         background: $bgTheme;
         width: 100%;
         box-shadow: 0 0 15px rgba(0,0,0,0.10);
@@ -1774,6 +1775,10 @@ a {
                 background-color: transparent;
                 margin-right: 30px;
                 border: 2px solid $colorWhite;
+                @media screen and (max-width: 992px) {
+                    display: block;
+                    margin: 50px auto;
+                }
 
                 &:hover {
                     color: $colorActive;
@@ -1784,6 +1789,10 @@ a {
             .call-to-action__browse__btn {
                 background: $bgBtnAction;
                 border: 2px solid $bgBtnAction;
+                @media screen and (max-width: 992px) {
+                    display: block;
+                    margin: auto;
+                }
 
                 &:hover {
                     background: $colorBlack;
@@ -1914,6 +1923,9 @@ a {
                     position: relative;
                     border: 1px solid #d7d7d7;
                     padding: 35px 35px 45px;
+                    @media screen and (max-width: 768px) {
+                        padding: 45px 35px;
+                    }
 
                     &:hover {
                         .icon-box:before {
@@ -1937,7 +1949,7 @@ a {
                         text-align: center;
                         fill: #00c0ff;
                         border: 1px solid #d7d7d7;
-                        background-color: #ffffff;
+                        background-color: #222222;
                         -webkit-transform: rotate(45deg);
                         -moz-transform: rotate(45deg);
                         -ms-transform: rotate(45deg);
@@ -1956,7 +1968,7 @@ a {
                             top: 0;
                             height: 100%;
                             width: 100%;
-                            background-color: #222222;
+                            background-color: #ffffff;
                             content: "";
                             -webkit-transform: scale(0);
                             -moz-transform: scale(0);
@@ -1982,6 +1994,9 @@ a {
                     }
 
                     h4 {
+                        @media screen and (max-width: 500px) {
+                            margin-top: 10px;
+                        }
                         a {
                             display: block;
                             position: relative;
