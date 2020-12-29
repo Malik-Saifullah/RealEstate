@@ -30,6 +30,7 @@ Image Quick View
 	max-height: 90%;
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
 	cursor: pointer;
+	margin: auto;
 }
 #imageQuickView iframe {
 	max-width: 80%;
