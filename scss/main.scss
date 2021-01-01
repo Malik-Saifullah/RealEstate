@@ -2,6 +2,7 @@
 @import "../vendor/owlcarousel/css/owl.carousel.min.css";
 @import "../vendor/owlcarousel/css/owl.theme.default.min.css";
 @import "../vendor/quickview/css/jquery_image_quickview.css";
+@import "../vendor/amsify/css/amsify.suggestags.css";
 
 @import "./vendor/fonts.scss";
 @import "./vendor/mixins.scss";
@@ -1004,45 +1005,24 @@ a {
 
         .container {
             padding-top: 50px;
-
-            #sale-form-container,
-            #rent-form-container {
+            form{
+                // display: grid;
+                // grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+                // column-gap: 20px;
+                // row-gap: 20px;
                 display: flex;
                 flex-wrap: wrap;
-                align-items: flex-end;
-                justify-content: center;
-
-                @media screen and (min-width: 500px) {
-                    justify-content: space-between;
-                }
-
-                @media screen and (min-width: 768px) {
-                    justify-content: space-evenly;
-                }
-
-                @media screen and (min-width: 1300px) {
-                    justify-content: space-between;
-                }
-
-                .form-group {
+                justify-content: space-between;
+                .form-group{
                     width: 100%;
-                    min-width: 200px;
                     margin-bottom: 25px;
-
-                    @media screen and (min-width: 500px) {
-                        width: 225px;
+                    @media screen and (min-width: 768px){
+                        min-width: 290px;
+                        width: fit-content;
+                        padding: 0 15px;
                     }
-
-                    @media screen and (min-width: 768px) {
-                        width: 225px;
-                    }
-
-                    @media screen and (min-width: 1300px) {
-                        width: 270px;
-                    }
-
-                    label {
-                        // position: relative;
+                    label{
+                        color: $colorWhite;
                         display: block;
                         font-size: 12px;
                         line-height: 28px;
@@ -1051,11 +1031,9 @@ a {
                         text-transform: uppercase;
                         margin-bottom: 5px;
                     }
-
-                    input,
-                    select {
-                        display: block;
+                    input,select{
                         width: 100%;
+                        display: block;
                         height: 48px;
                         font-size: 13px;
                         color: #777777;
@@ -1069,38 +1047,73 @@ a {
                         -o-transition: all 300ms ease;
                         -moz-transition: all 300ms ease;
                         transition: all 300ms ease;
+                        border: none;
                     }
-                }
-
-                input[type="submit"] {
-                    color: $colorWhite;
-                    background: $bgBtnAction;
-                    height: 48px;
-                    font-size: 13px;
-                    line-height: 26px;
-                    font-weight: 400;
-                    padding: 10px 30px 10px 25px;
-                    border: 1px solid $bgBtnAction;
-                    -webkit-transition: all 300ms ease;
-                    -ms-transition: all 300ms ease;
-                    -o-transition: all 300ms ease;
-                    -moz-transition: all 300ms ease;
-                    transition: all 300ms ease;
-                    cursor: pointer;
-
-                    &:hover {
+                    .palette-box{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .checkbox-container {
+                            // margin: 9px 0px;
+                            position: relative;
+                            // padding-left: 28px;
+                            margin-bottom: 0px;
+                            cursor: pointer;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            input {
+                                // position: absolute;
+                                cursor: pointer;
+                                opacity: 0;
+                                height: 34px;
+                                width: 34px;
+                                margin: 0;
+                                left: 0;
+                                @media screen and (min-width: 768px){
+                                    height: 48px;
+                                    width: 48px;
+                                }
+                            }
+                            .checkmark {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: absolute;
+                                font-size: 15px;
+                                line-height: 1;
+                                font-weight: 400;
+                                border: 1px solid rgba(0, 0, 0, 0.2);
+                                top: 0;
+                                // left: 0;
+                                height: 34px;
+                                width: 34px;
+                                color: $colorActive;
+                                background-color: $colorWhite;
+                                @media screen and (min-width: 768px){
+                                    height: 48px;
+                                    width: 48px;
+                                }
+                            }
+                            input:checked ~ .checkmark {
+                                color: $colorWhite;
+                                background-color: $colorActive;
+                            }
+                        }
+                    }
+                    input[type="submit"]{
                         background: $colorActive;
+                        color: $colorWhite;
+                        font-size: 16px;
+                        transition: .5s ease;
+                        margin-top: 33px;
+                        &:hover{
+                            background: $colorBlack;
+                            border: 1px solid $colorWhite;
+                        }
                     }
                 }
-            }
-
-            .tab-content-selected,
-            .tab-content-selected {
-                display: none;
-            }
-
-            #rent-form-container {
-                display: none;
             }
         }
     }
@@ -1345,96 +1358,10 @@ a {
 =======================================================*/
 #property-types {
     .container {
-        #property-filter-container {
+        #property-filter{
             border: 4px solid #808080;
-            padding: 15px;
-
-            #property-filter-sub-section {
-                // display: flex;
-                // flex-wrap: wrap;
-                // align-items: flex-end;
-                // justify-content: center;
-
-                // @media screen and (min-width: 500px) {
-                //     justify-content: space-between;
-                // }
-
-                // @media screen and (min-width: 768px) {
-                //     justify-content: space-evenly;
-                // }
-
-                // @media screen and (min-width: 1300px) {
-                //     justify-content: space-between;
-                // }
-
-                .form-group {
-                    width: 100%;
-                    // min-width: 234px;
-                    margin: 0px 12px 25px;
-                    // max-width: 250px;
-                    display: inline-block;
-
-                    @media screen and (min-width: 768px) {
-                        width: 45%;
-                    }
-
-                    @media screen and (min-width: 1300px) {
-                        width: 250px;
-                    }
-
-                    label {
-                        // position: relative;
-                        display: block;
-                        font-size: 12px;
-                        line-height: 28px;
-                        color: #ffffff;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        margin-bottom: 5px;
-                    }
-
-                    input,
-                    select {
-                        display: block;
-                        width: 100%;
-                        height: 48px;
-                        font-size: 13px;
-                        color: #777777;
-                        line-height: 26px;
-                        font-weight: 400;
-                        padding: 10px 30px 10px 25px;
-                        background: #ffffff;
-                        border: 1px solid #e0e0e0;
-                        -webkit-transition: all 300ms ease;
-                        -ms-transition: all 300ms ease;
-                        -o-transition: all 300ms ease;
-                        -moz-transition: all 300ms ease;
-                        transition: all 300ms ease;
-                    }
-                }
-
-                input[type="submit"] {
-                    color: $colorWhite;
-                    background: $bgBtnAction;
-                    height: 48px;
-                    font-size: 13px;
-                    line-height: 26px;
-                    font-weight: 400;
-                    padding: 10px 30px 10px 25px;
-                    border: 1px solid $bgBtnAction;
-                    -webkit-transition: all 300ms ease;
-                    -ms-transition: all 300ms ease;
-                    -o-transition: all 300ms ease;
-                    -moz-transition: all 300ms ease;
-                    transition: all 300ms ease;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: $colorActive;
-                    }
-                }
-            }
         }
+
 
         .property-ads-outer-container {
             display: grid;

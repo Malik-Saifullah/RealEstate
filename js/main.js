@@ -54,16 +54,39 @@ $(function () { // DOM ready
 $(".btn-sale").click(function () {
     $(this).addClass("selected");
     $(".btn-rent").removeClass("selected");
-    $("#rent-form-container").hide();
-    $("#sale-form-container").css("display", "flex");
 });
 
 $(".btn-rent").click(function () {
     $(this).addClass("selected");
     $(".btn-sale").removeClass("selected");
-    $("#sale-form-container").hide();
-    $("#rent-form-container").css("display", "flex");
 });
+
+
+
+
+$('input[name="tag"]').amsifySuggestags({
+    type : 'amsify'
+});
+// $('input[name="color"]').amsifySuggestags({
+//     type : 'amsify',
+//     suggestions: ['Black', 'White', 'Red', 'Blue', 'Green', 'Orange']
+// });
+// $('input[name="toAjax"]').amsifySuggestags({
+//     type : 'amsify',
+//     suggestionsAction : {
+//         url : 'jquery-plugins/suggestags/examples/suggestions.php'
+//     }
+// });
+// $('input[name="planets"]').amsifySuggestags({
+//     type : 'amsify',
+//     suggestions: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Uranus', 'Neptune', 'Pluto'],
+//     whiteList: true
+// });
+// $('input[name="anything"]').amsifySuggestags({
+//     type : 'amsify',
+//     tagLimit: 5
+// });
+
 
 
 

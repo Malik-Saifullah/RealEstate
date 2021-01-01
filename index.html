@@ -244,7 +244,7 @@
                     <div class="container">
                         <form action="" id="sale-form-container">
                             <div class="form-group">
-                                <label for="city">city</label>
+                                <label for="city">City</label>
                                 <select class="city-select-box" name="city">
                                     <option>DHA Lahore</option>
                                     <option>DHA Raya(Lahore)</option>
@@ -256,7 +256,11 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="category">Category</label>
+                                <label for="location">Location</label>
+                                <input type="text" name="location" placeholder="Location">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Property Type</label>
                                 <select name="category">
                                     <option value="">Category</option>
                                     <option value="Homes">Homes</option>
@@ -267,89 +271,110 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="type">Property Type</label>
-                                <select id="status" name="type">
-                                    <option>Property Type</option>
-                                </select>
+                                <label for="price-form">Price(PKR) from</label>
+                                <input type="text" placeholder="Price From" name="price-form">
                             </div>
                             <div class="form-group">
-                                <label id="phase">Phase</label>
-                                <input type="text" placeholder="Phase" name="phase" required="">
+                                <label for="price-to">Price(PKR) To</label>
+                                <input type="text" placeholder="Price To" name="price-to">
                             </div>
                             <div class="form-group">
-                                <label for="bedroom">Bedroom</label>
-                                <input type="text" placeholder="Bedroom" name="bedroom" required="">
+                                <label for="beds">Beds</label>
+                                <div class="palette-box" name="beds">
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">5</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">6</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">7</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">8</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">9</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">10+</span>
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="price-form">Price from</label>
-                                <input type="text" placeholder="Price From" name="price-form" required="">
+                                <label for="area-form">Area(Marla) from:</label>
+                                <input type="text" placeholder="Area From" name="area-form">
                             </div>
                             <div class="form-group">
-                                <label for="price-to">Price To</label>
-                                <input type="text" placeholder="Price To" name="price-to" required="">
+                                <label for="area-to">Area(Marla) To:</label>
+                                <input type="text" placeholder="Area To" name="area-to">
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Search">
+                                <label for="baths">Baths</label>
+                                <div class="palette-box" name="baths">
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">1</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">2</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">3</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">4</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">5</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="bedNumber">
+                                        <span class="checkmark">6+</span>
+                                    </label>
+                                </div>
                             </div>
-                        </form>
-                        <form action="" id="rent-form-container">
                             <div class="form-group">
-                                <label for="city">city</label>
-                                <select class="city-select-box" name="city">
-                                    <option>DHA Lahore</option>
-                                    <option>DHA Raya(Lahore)</option>
-                                    <option>DHA Multan</option>
-                                    <option>DHA Bahawalpur</option>
-                                    <option>DHA Gujranwala</option>
-                                    <option>DHA Peshawar</option>
-                                    <option>DHA Quetta</option>
-                                </select>
+                                <label for="tag">Tags</label>
+                                <input type="text" placeholder="Enter Tags" name="tag">
                             </div>
                             <div class="form-group">
-                                <label for="category">Category</label>
+                                <label for="category">Classification</label>
                                 <select name="category">
-                                    <option value="">Category</option>
-                                    <option value="Homes">Homes</option>
-                                    <option value="Commercial">Commercial</option>
-                                    <option value="Appartment">Appartment</option>
-                                    <option value="Plots">Plots</option>
-                                    <option value="Farm House">Farm House</option>
+                                    <option value="">Titanium Agent</option>
+                                    <option value="Homes">Hot</option>
+                                    <option value="Commercial">With Photos</option>
+                                    <option value="Appartment">With Videos</option>
+                                    <option value="Plots">Veriffied</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="type">Property Type</label>
-                                <select id="status" name="type">
-                                    <option>Property Type</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label id="phase">Phase</label>
-                                <input type="text" placeholder="Phase" name="phase" required="">
-                            </div>
-                            <div class="form-group">
-                                <label for="bedroom">Bedroom</label>
-                                <input type="text" placeholder="Bedroom" name="bedroom" required="">
-                            </div>
-                            <div class="form-group">
-                                <label for="price-form">Price from</label>
-                                <input type="text" placeholder="Price From" name="price-form" required="">
-                            </div>
-                            <div class="form-group">
-                                <label for="price-to">Price To</label>
-                                <input type="text" placeholder="Price To" name="price-to" required="">
-                            </div>
-                            <div class="form-group">
-                                <label for="city">city</label>
-                                <select class="custom-select-box" name="unit" placeholder="Unit" required="">
-                                    <option>Unit</option>
-                                    <option>Square Feet</option>
-                                    <option>Square Yards</option>
-                                    <option>Square Meters</option>
-                                    <option>Marla</option>
-                                    <option>Kanal</option>
-                                </select>
-                            </div>
-                            <div class="form-group" style="width:100%;">
                                 <input type="submit" value="Search">
                             </div>
                         </form>
@@ -3683,6 +3708,7 @@
 
     <script src="./vendor/jquery/jquery-3.5.1.min.js"></script>
     <script src="./vendor/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="./vendor/amsify/js/jquery.amsify.suggestags.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

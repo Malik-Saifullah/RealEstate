@@ -3,6 +3,7 @@
 @import url(../vendor/owlcarousel/css/owl.carousel.min.css);
 @import url(../vendor/owlcarousel/css/owl.theme.default.min.css);
 @import url(../vendor/quickview/css/jquery_image_quickview.css);
+@import url(../vendor/amsify/css/amsify.suggestags.css);
 /*=======================================================
                 reset default styling
 =======================================================*/
@@ -907,70 +908,31 @@ a {
 #property-filter .property-content-box .container {
   padding-top: 50px;
 }
-#property-filter .property-content-box .container #sale-form-container,
-#property-filter .property-content-box .container #rent-form-container {
+#property-filter .property-content-box .container form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-@media screen and (min-width: 500px) {
-  #property-filter .property-content-box .container #sale-form-container,
-  #property-filter .property-content-box .container #rent-form-container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-@media screen and (min-width: 768px) {
-  #property-filter .property-content-box .container #sale-form-container,
-  #property-filter .property-content-box .container #rent-form-container {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-@media screen and (min-width: 1300px) {
-  #property-filter .property-content-box .container #sale-form-container,
-  #property-filter .property-content-box .container #rent-form-container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-#property-filter .property-content-box .container #sale-form-container .form-group,
-#property-filter .property-content-box .container #rent-form-container .form-group {
+#property-filter .property-content-box .container form .form-group {
   width: 100%;
-  min-width: 200px;
   margin-bottom: 25px;
 }
-@media screen and (min-width: 500px) {
-  #property-filter .property-content-box .container #sale-form-container .form-group,
-  #property-filter .property-content-box .container #rent-form-container .form-group {
-    width: 225px;
-  }
-}
 @media screen and (min-width: 768px) {
-  #property-filter .property-content-box .container #sale-form-container .form-group,
-  #property-filter .property-content-box .container #rent-form-container .form-group {
-    width: 225px;
+  #property-filter .property-content-box .container form .form-group {
+    min-width: 290px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 15px;
   }
 }
-@media screen and (min-width: 1300px) {
-  #property-filter .property-content-box .container #sale-form-container .form-group,
-  #property-filter .property-content-box .container #rent-form-container .form-group {
-    width: 270px;
-  }
-}
-#property-filter .property-content-box .container #sale-form-container .form-group label,
-#property-filter .property-content-box .container #rent-form-container .form-group label {
+#property-filter .property-content-box .container form .form-group label {
+  color: #ffffff;
   display: block;
   font-size: 12px;
   line-height: 28px;
@@ -979,12 +941,9 @@ a {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-#property-filter .property-content-box .container #sale-form-container .form-group input,
-#property-filter .property-content-box .container #sale-form-container .form-group select,
-#property-filter .property-content-box .container #rent-form-container .form-group input,
-#property-filter .property-content-box .container #rent-form-container .form-group select {
-  display: block;
+#property-filter .property-content-box .container form .form-group input, #property-filter .property-content-box .container form .form-group select {
   width: 100%;
+  display: block;
   height: 48px;
   font-size: 13px;
   color: #777777;
@@ -995,31 +954,84 @@ a {
   border: 1px solid #e0e0e0;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  border: none;
 }
-#property-filter .property-content-box .container #sale-form-container input[type="submit"],
-#property-filter .property-content-box .container #rent-form-container input[type="submit"] {
-  color: #ffffff;
-  background: #2f4f4f;
-  height: 48px;
-  font-size: 13px;
-  line-height: 26px;
-  font-weight: 400;
-  padding: 10px 30px 10px 25px;
-  border: 1px solid #2f4f4f;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
+#property-filter .property-content-box .container form .form-group .palette-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container {
+  position: relative;
+  margin-bottom: 0px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-#property-filter .property-content-box .container #sale-form-container input[type="submit"]:hover,
-#property-filter .property-content-box .container #rent-form-container input[type="submit"]:hover {
+#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container input {
+  cursor: pointer;
+  opacity: 0;
+  height: 34px;
+  width: 34px;
+  margin: 0;
+  left: 0;
+}
+@media screen and (min-width: 768px) {
+  #property-filter .property-content-box .container form .form-group .palette-box .checkbox-container input {
+    height: 48px;
+    width: 48px;
+  }
+}
+#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container .checkmark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  top: 0;
+  height: 34px;
+  width: 34px;
+  color: #00c0ff;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  #property-filter .property-content-box .container form .form-group .palette-box .checkbox-container .checkmark {
+    height: 48px;
+    width: 48px;
+  }
+}
+#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container input:checked ~ .checkmark {
+  color: #ffffff;
+  background-color: #00c0ff;
+}
+#property-filter .property-content-box .container form .form-group input[type="submit"] {
   background: #00c0ff;
+  color: #ffffff;
+  font-size: 16px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  margin-top: 33px;
 }
-#property-filter .property-content-box .container .tab-content-selected,
-#property-filter .property-content-box .container .tab-content-selected {
-  display: none;
-}
-#property-filter .property-content-box .container #rent-form-container {
-  display: none;
+#property-filter .property-content-box .container form .form-group input[type="submit"]:hover {
+  background: #272727;
+  border: 1px solid #ffffff;
 }
 
 /*=======================================================
@@ -1252,64 +1264,8 @@ a {
 /*=======================================================
                     property-types section
 =======================================================*/
-#property-types .container #property-filter-container {
+#property-types .container #property-filter {
   border: 4px solid #808080;
-  padding: 15px;
-}
-#property-types .container #property-filter-container #property-filter-sub-section .form-group {
-  width: 100%;
-  margin: 0px 12px 25px;
-  display: inline-block;
-}
-@media screen and (min-width: 768px) {
-  #property-types .container #property-filter-container #property-filter-sub-section .form-group {
-    width: 45%;
-  }
-}
-@media screen and (min-width: 1300px) {
-  #property-types .container #property-filter-container #property-filter-sub-section .form-group {
-    width: 250px;
-  }
-}
-#property-types .container #property-filter-container #property-filter-sub-section .form-group label {
-  display: block;
-  font-size: 12px;
-  line-height: 28px;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-#property-types .container #property-filter-container #property-filter-sub-section .form-group input,
-#property-types .container #property-filter-container #property-filter-sub-section .form-group select {
-  display: block;
-  width: 100%;
-  height: 48px;
-  font-size: 13px;
-  color: #777777;
-  line-height: 26px;
-  font-weight: 400;
-  padding: 10px 30px 10px 25px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-#property-types .container #property-filter-container #property-filter-sub-section input[type="submit"] {
-  color: #ffffff;
-  background: #2f4f4f;
-  height: 48px;
-  font-size: 13px;
-  line-height: 26px;
-  font-weight: 400;
-  padding: 10px 30px 10px 25px;
-  border: 1px solid #2f4f4f;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  cursor: pointer;
-}
-#property-types .container #property-filter-container #property-filter-sub-section input[type="submit"]:hover {
-  background: #00c0ff;
 }
 #property-types .container .property-ads-outer-container {
   display: grid;
