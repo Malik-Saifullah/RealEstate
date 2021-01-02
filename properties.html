@@ -328,27 +328,27 @@
                                         <label for="baths">Baths</label>
                                         <div class="palette-box" name="baths">
                                             <label class="checkbox-container">
-                                                <input type="radio" name="bedNumber">
+                                                <input type="radio" name="bathNumber">
                                                 <span class="checkmark">1</span>
                                             </label>
                                             <label class="checkbox-container">
-                                                <input type="radio" name="bedNumber">
+                                                <input type="radio" name="bathNumber">
                                                 <span class="checkmark">2</span>
                                             </label>
                                             <label class="checkbox-container">
-                                                <input type="radio" name="bedNumber">
+                                                <input type="radio" name="bathNumber">
                                                 <span class="checkmark">3</span>
                                             </label>
                                             <label class="checkbox-container">
-                                                <input type="radio" name="bedNumber">
+                                                <input type="radio" name="bathNumber">
                                                 <span class="checkmark">4</span>
                                             </label>
                                             <label class="checkbox-container">
-                                                <input type="radio" name="bedNumber">
+                                                <input type="radio" name="bathNumber">
                                                 <span class="checkmark">5</span>
                                             </label>
                                             <label class="checkbox-container">
-                                                <input type="radio" name="bedNumber">
+                                                <input type="radio" name="bathNumber">
                                                 <span class="checkmark">6+</span>
                                             </label>
                                         </div>
@@ -1595,6 +1595,11 @@
     <script src="./vendor/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="./vendor/amsify/js/jquery.amsify.suggestags.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        $('input[name="tag"]').amsifySuggestags({
+            type : 'amsify'
+        });
+    </script>
 </body>
 
 </html>

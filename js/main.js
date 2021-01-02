@@ -64,32 +64,6 @@ $(".btn-rent").click(function () {
 
 
 
-$('input[name="tag"]').amsifySuggestags({
-    type : 'amsify'
-});
-// $('input[name="color"]').amsifySuggestags({
-//     type : 'amsify',
-//     suggestions: ['Black', 'White', 'Red', 'Blue', 'Green', 'Orange']
-// });
-// $('input[name="toAjax"]').amsifySuggestags({
-//     type : 'amsify',
-//     suggestionsAction : {
-//         url : 'jquery-plugins/suggestags/examples/suggestions.php'
-//     }
-// });
-// $('input[name="planets"]').amsifySuggestags({
-//     type : 'amsify',
-//     suggestions: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Uranus', 'Neptune', 'Pluto'],
-//     whiteList: true
-// });
-// $('input[name="anything"]').amsifySuggestags({
-//     type : 'amsify',
-//     tagLimit: 5
-// });
-
-
-
-
 
 $('.banner__content__box').owlCarousel({
     items: 1,
