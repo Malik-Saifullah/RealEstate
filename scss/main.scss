@@ -2,7 +2,6 @@
 @import "../vendor/owlcarousel/css/owl.carousel.min.css";
 @import "../vendor/owlcarousel/css/owl.theme.default.min.css";
 @import "../vendor/quickview/css/jquery_image_quickview.css";
-@import "../vendor/amsify/css/amsify.suggestags.css";
 
 @import "./vendor/fonts.scss";
 @import "./vendor/mixins.scss";
@@ -957,167 +956,13 @@ a {
     }
 }
 
+
 /*=======================================================
                 property-filter section
 =======================================================*/
 #property-filter {
-    margin-top: -50px;
-    position: relative;
-    z-index: 9;
-
-    .property-btn-controll {
-        margin-top: -20px;
-        border-bottom: 2px solid $colorActive;
-
-        .container {
-            .tab-buttons {
-                .tab-btn {
-                    display: inline-block;
-                    font-size: 16px;
-                    line-height: 30px;
-                    color: #ffffff;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    padding: 10px 30px;
-                    background-color: #1a1d1f;
-                    margin-right: 10px;
-                    cursor: pointer;
-                    -webkit-transition: all 300ms ease;
-                    -moz-transition: all 300ms ease;
-                    -ms-transition: all 300ms ease;
-                    -o-transition: all 300ms ease;
-                    transition: all 300ms ease;
-
-                    &:hover {
-                        background: $colorActive;
-                    }
-                }
-
-                .selected {
-                    background: $colorActive;
-                }
-            }
-        }
-    }
-
-    .property-content-box {
-        background: $bgTheme;
-
-        .container {
-            padding-top: 50px;
-            form{
-                // display: grid;
-                // grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-                // column-gap: 20px;
-                // row-gap: 20px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                .form-group{
-                    width: 100%;
-                    margin-bottom: 25px;
-                    @media screen and (min-width: 768px){
-                        min-width: 290px;
-                        width: fit-content;
-                        padding: 0 15px;
-                    }
-                    label{
-                        color: $colorWhite;
-                        display: block;
-                        font-size: 12px;
-                        line-height: 28px;
-                        color: #ffffff;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        margin-bottom: 5px;
-                    }
-                    input,select{
-                        width: 100%;
-                        display: block;
-                        height: 48px;
-                        font-size: 13px;
-                        color: #777777;
-                        line-height: 26px;
-                        font-weight: 400;
-                        padding: 10px 30px 10px 25px;
-                        background: #ffffff;
-                        border: 1px solid #e0e0e0;
-                        -webkit-transition: all 300ms ease;
-                        -ms-transition: all 300ms ease;
-                        -o-transition: all 300ms ease;
-                        -moz-transition: all 300ms ease;
-                        transition: all 300ms ease;
-                        border: none;
-                    }
-                    .palette-box{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        .checkbox-container {
-                            // margin: 9px 0px;
-                            position: relative;
-                            // padding-left: 28px;
-                            margin-bottom: 0px;
-                            cursor: pointer;
-                            -webkit-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
-                            user-select: none;
-                            input {
-                                // position: absolute;
-                                cursor: pointer;
-                                opacity: 0;
-                                height: 34px;
-                                width: 34px;
-                                margin: 0;
-                                left: 0;
-                                @media screen and (min-width: 768px){
-                                    height: 48px;
-                                    width: 48px;
-                                }
-                            }
-                            .checkmark {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                position: absolute;
-                                font-size: 15px;
-                                line-height: 1;
-                                font-weight: 400;
-                                border: 1px solid rgba(0, 0, 0, 0.2);
-                                top: 0;
-                                // left: 0;
-                                height: 34px;
-                                width: 34px;
-                                color: $colorActive;
-                                background-color: $colorWhite;
-                                @media screen and (min-width: 768px){
-                                    height: 48px;
-                                    width: 48px;
-                                }
-                            }
-                            input:checked ~ .checkmark {
-                                color: $colorWhite;
-                                background-color: $colorActive;
-                            }
-                        }
-                    }
-                    input[type="submit"]{
-                        background: $colorActive;
-                        color: $colorWhite;
-                        font-size: 16px;
-                        transition: .5s ease;
-                        margin-top: 33px;
-                        &:hover{
-                            background: $colorBlack;
-                            border: 1px solid $colorWhite;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
+
 
 /*=======================================================
                 title styling of each section
@@ -1786,8 +1631,13 @@ a {
                     line-height: 20px;
                     padding: 10px 25px;
                     background-color: #ffffff;
-                    border: 2px solid #cccccc;
                     height: 44px;
+                    border: none;
+                    border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    -moz-border-radius: 7px;
+                    -ms-border-radius: 7px;
+                    -o-border-radius: 7px;
                 }
             }
 
@@ -1799,10 +1649,15 @@ a {
                 line-height: 20px;
                 padding: 10px 25px;
                 background-color: #ffffff;
-                border: 2px solid #cccccc;
                 height: 160px;
                 margin-bottom: 25px;
-            }
+                border: none;
+                border-radius: 7px;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                -ms-border-radius: 7px;
+                -o-border-radius: 7px;
+}
 
             .property-detail .property-features .review-comment-form button {
                 display: block;

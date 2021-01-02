@@ -51,20 +51,6 @@ $(function () { // DOM ready
 
 
 
-$(".btn-sale").click(function () {
-    $(this).addClass("selected");
-    $(".btn-rent").removeClass("selected");
-});
-
-$(".btn-rent").click(function () {
-    $(this).addClass("selected");
-    $(".btn-sale").removeClass("selected");
-});
-
-
-
-
-
 $('.banner__content__box').owlCarousel({
     items: 1,
     loop: true,

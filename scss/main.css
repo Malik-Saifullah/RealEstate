@@ -3,7 +3,6 @@
 @import url(../vendor/owlcarousel/css/owl.carousel.min.css);
 @import url(../vendor/owlcarousel/css/owl.theme.default.min.css);
 @import url(../vendor/quickview/css/jquery_image_quickview.css);
-@import url(../vendor/amsify/css/amsify.suggestags.css);
 /*=======================================================
                 reset default styling
 =======================================================*/
@@ -873,167 +872,6 @@ a {
 /*=======================================================
                 property-filter section
 =======================================================*/
-#property-filter {
-  margin-top: -50px;
-  position: relative;
-  z-index: 9;
-}
-#property-filter .property-btn-controll {
-  margin-top: -20px;
-  border-bottom: 2px solid #00c0ff;
-}
-#property-filter .property-btn-controll .container .tab-buttons .tab-btn {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 30px;
-  color: #ffffff;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 10px 30px;
-  background-color: #1a1d1f;
-  margin-right: 10px;
-  cursor: pointer;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-#property-filter .property-btn-controll .container .tab-buttons .tab-btn:hover {
-  background: #00c0ff;
-}
-#property-filter .property-btn-controll .container .tab-buttons .selected {
-  background: #00c0ff;
-}
-#property-filter .property-content-box {
-  background: #2e2e2e;
-}
-#property-filter .property-content-box .container {
-  padding-top: 50px;
-}
-#property-filter .property-content-box .container form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-#property-filter .property-content-box .container form .form-group {
-  width: 100%;
-  margin-bottom: 25px;
-}
-@media screen and (min-width: 768px) {
-  #property-filter .property-content-box .container form .form-group {
-    min-width: 290px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0 15px;
-  }
-}
-#property-filter .property-content-box .container form .form-group label {
-  color: #ffffff;
-  display: block;
-  font-size: 12px;
-  line-height: 28px;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-#property-filter .property-content-box .container form .form-group input, #property-filter .property-content-box .container form .form-group select {
-  width: 100%;
-  display: block;
-  height: 48px;
-  font-size: 13px;
-  color: #777777;
-  line-height: 26px;
-  font-weight: 400;
-  padding: 10px 30px 10px 25px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  border: none;
-}
-#property-filter .property-content-box .container form .form-group .palette-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container {
-  position: relative;
-  margin-bottom: 0px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container input {
-  cursor: pointer;
-  opacity: 0;
-  height: 34px;
-  width: 34px;
-  margin: 0;
-  left: 0;
-}
-@media screen and (min-width: 768px) {
-  #property-filter .property-content-box .container form .form-group .palette-box .checkbox-container input {
-    height: 48px;
-    width: 48px;
-  }
-}
-#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container .checkmark {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 400;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  top: 0;
-  height: 34px;
-  width: 34px;
-  color: #00c0ff;
-  background-color: #ffffff;
-}
-@media screen and (min-width: 768px) {
-  #property-filter .property-content-box .container form .form-group .palette-box .checkbox-container .checkmark {
-    height: 48px;
-    width: 48px;
-  }
-}
-#property-filter .property-content-box .container form .form-group .palette-box .checkbox-container input:checked ~ .checkmark {
-  color: #ffffff;
-  background-color: #00c0ff;
-}
-#property-filter .property-content-box .container form .form-group input[type="submit"] {
-  background: #00c0ff;
-  color: #ffffff;
-  font-size: 16px;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  margin-top: 33px;
-}
-#property-filter .property-content-box .container form .form-group input[type="submit"]:hover {
-  background: #272727;
-  border: 1px solid #ffffff;
-}
-
 /*=======================================================
                 title styling of each section
 =======================================================*/
@@ -1633,8 +1471,13 @@ a {
   line-height: 20px;
   padding: 10px 25px;
   background-color: #ffffff;
-  border: 2px solid #cccccc;
   height: 44px;
+  border: none;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 #property-detail-box .container .property-detail-col-left .property-detail .property-features .review-comment-form textarea {
   width: 100%;
@@ -1644,9 +1487,14 @@ a {
   line-height: 20px;
   padding: 10px 25px;
   background-color: #ffffff;
-  border: 2px solid #cccccc;
   height: 160px;
   margin-bottom: 25px;
+  border: none;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 #property-detail-box .container .property-detail-col-left .property-detail .property-features .review-comment-form button {
   display: block;
