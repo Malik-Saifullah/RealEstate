@@ -51,6 +51,26 @@ $(function () { // DOM ready
 
 
 
+
+$('.__btn-box button').on('click', function () {
+    $('.__btn-box button').toggleClass('active');
+});
+
+
+
+
+
+$('.more-filter-box .__btn-filter').on('click', function () {
+    if($('.advance-filter-box').css('display','none')){
+        $('.advance-filter-box').css('display','flex');
+        $('.more-filter-box').css('display','none');
+    }
+});
+
+
+
+
+
 $('.banner__content__box').owlCarousel({
     items: 1,
     loop: true,

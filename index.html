@@ -232,6 +232,106 @@
 
             <!-- property-filter section -->
             <section id="property-filter">
+                <div class="container">
+                    <div class="filter-box">
+                        <div class="__btn-col-box">
+                            <div class="__btn-box">
+                                <button class="__btn-rent active">Rent</button>
+                                <button class="__btn-buy">Buy</button>
+                            </div>
+                        </div>
+                        <div class="__location-col-box">
+                            <div class="__input-field-box">
+                                <label for="location">Location</label>
+                                <input type="text" name="location" placeholder="Location">
+                            </div>
+                        </div>
+                        <div class="__search-col-box">
+                            <button class="__btn-search" type="submit">Search</button>
+                        </div>
+                    </div>
+                    <div class="more-filter-box">
+                        <button class="__btn-filter">Advance filter</button>
+                    </div>
+                    <div class="advance-filter-box">
+                        <div class="__col-box">
+                            <div class="__input-field-box">
+                                <label for="area">Area</label>
+                                <div class="__full-col">
+                                    <input type="text" name="area" placeholder="Min">
+                                    <span> - </span>
+                                    <input type="text" name="area" placeholder="Max">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="__col-box">
+                            <div class="form-checkbox">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox-input">
+                                        <span class="checkmark"></span>
+                                        <span class="fill-control-description">Residential</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox-input">
+                                        <span class="checkmark"></span>
+                                        <span class="fill-control-description">Commercial</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox-input">
+                                        <span class="checkmark"></span>
+                                        <span class="fill-control-description">Appartments</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox-input">
+                                        <span class="checkmark"></span>
+                                        <span class="fill-control-description">Flats</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox-input">
+                                        <span class="checkmark"></span>
+                                        <span class="fill-control-description">Plots</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkbox-input">
+                                        <span class="checkmark"></span>
+                                        <span class="fill-control-description">Others</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="__second-row">
+                            <div class="__col-box">
+                                <div class="__input-field-box">
+                                    <label for="price">Price (Rs)</label>
+                                    <div class="__full-col">
+                                        <input type="text" name="price" placeholder="Min">
+                                        <span> - </span>
+                                        <input type="text" name="price" placeholder="Max">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="__half-col">
+                                <label for="beds">Beds</label>
+                                <input type="text" name="beds" placeholder="Beds">
+                            </div>
+                            <div class="__half-col">
+                                <label for="baths">Baths</label>
+                                <input type="text" name="baths" placeholder="Baths">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- recent-property-ads section -->
@@ -3548,7 +3648,9 @@
                 </div>
                 <div class="footer-bottom">
                     <div class="back-to-top">
-                        <span class="la la-angle-double-up"></span>
+                        <a href="#">
+                            <span class="la la-angle-double-up"></span>
+                        </a>
                     </div>
                     <p class="copyright-text">© 2020
                         <a href="http://defenceestate.com/">Defence Estate</a>
