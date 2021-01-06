@@ -1304,18 +1304,23 @@ a {
                 property adds card
 =======================================================*/
 .property-ads-outer-container {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(310px,1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px,1fr));
+    row-gap: 20px;
+    @media screen and (min-width: 768px){
+        grid-template-columns: repeat(auto-fill, minmax(310px,1fr));
+        column-gap: 20px;
+    }
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
 
     .property-ads-inner-container {
         width: 100%;
-        max-width: 370px;
+        // max-width: 370px;
         padding: 5px;
-        margin: 10px;
+        // margin: 10px;
 
         // .property-images {}
 
@@ -1450,7 +1455,8 @@ a {
 #services-section,
 #property-types,
 #property-maps,
-#property-detail-box {
+#property-detail-box,
+#files {
     .title-box {
         margin-bottom: 65px;
     }
@@ -1511,6 +1517,20 @@ a {
             margin-top: 30px;
 
             .property-ads-inner-container {
+                border: 3px solid #808080;
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                    files section
+=======================================================*/
+#files{
+    .container{
+        .property-ads-outer-container{
+            .property-ads-inner-container{
                 border: 3px solid #808080;
             }
         }

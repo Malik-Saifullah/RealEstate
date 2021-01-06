@@ -1251,20 +1251,20 @@ a {
                 property adds card
 =======================================================*/
 .property-ads-outer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  row-gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .property-ads-outer-container {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
 }
 .property-ads-outer-container .property-ads-inner-container {
   width: 100%;
-  max-width: 370px;
   padding: 5px;
-  margin: 10px;
 }
 .property-ads-outer-container .property-ads-inner-container .property-desc-box {
   width: 100%;
@@ -1382,7 +1382,8 @@ a {
 #services-section,
 #property-types,
 #property-maps,
-#property-detail-box {
+#property-detail-box,
+#files {
   background-color: #2e2e2e;
   padding: 128px 0 80px;
 }
@@ -1396,7 +1397,8 @@ a {
 #services-section .title-box,
 #property-types .title-box,
 #property-maps .title-box,
-#property-detail-box .title-box {
+#property-detail-box .title-box,
+#files .title-box {
   margin-bottom: 65px;
 }
 
@@ -1439,6 +1441,13 @@ a {
   margin-top: 30px;
 }
 #property-maps .container .property-ads-outer-container .property-ads-inner-container {
+  border: 3px solid #808080;
+}
+
+/*=======================================================
+                    files section
+=======================================================*/
+#files .container .property-ads-outer-container .property-ads-inner-container {
   border: 3px solid #808080;
 }
 
