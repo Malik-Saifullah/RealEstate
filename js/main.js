@@ -60,6 +60,14 @@ $('.__btn-box button').on('click', function () {
 
 
 
+// $('.la-exclamation-circle').on('click', function (e) {
+//     $('.tooltip .tooltip-box').toggle();
+// });
+
+
+
+
+
 $('.more-filter-box .__btn-filter').on('click', function () {
     if ($('.advance-filter-box').css('display', 'none')) {
         $('.advance-filter-box').css('display', 'flex');
