@@ -1997,8 +1997,10 @@ a {
   text-transform: capitalize;
 }
 #property-detail-box .container .property-detail-col-right .sidebar .search-properties form {
-  background-color: #ffffff;
   padding: 35px 30px;
+  background-color: #2e2e2e;
+  -webkit-box-shadow: 0px 1px 24px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 24px 1px rgba(0, 0, 0, 0.1);
 }
 #property-detail-box .container .property-detail-col-right .sidebar .search-properties form .form-group {
   display: block;
@@ -2043,13 +2045,16 @@ a {
 }
 #property-detail-box .container .property-detail-col-right .sidebar .categories .cat-list {
   padding: 30px 35px 30px;
+  background-color: #2e2e2e;
+  -webkit-box-shadow: 0px 1px 24px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 24px 1px rgba(0, 0, 0, 0.1);
 }
 #property-detail-box .container .property-detail-col-right .sidebar .categories .cat-list li {
   margin-bottom: 22px;
 }
 #property-detail-box .container .property-detail-col-right .sidebar .categories .cat-list li a {
   font-size: 16px;
-  color: #222222;
+  color: #ffffff;
   line-height: 20px;
   font-weight: 700;
   display: block;
@@ -2067,6 +2072,9 @@ a {
 }
 #property-detail-box .container .property-detail-col-right .sidebar .recent-properties .widget-content {
   padding: 30px 35px 30px;
+  background-color: #2e2e2e;
+  -webkit-box-shadow: 0px 1px 24px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 24px 1px rgba(0, 0, 0, 0.1);
 }
 #property-detail-box .container .property-detail-col-right .sidebar .recent-properties .widget-content .post {
   position: relative;
@@ -2114,12 +2122,12 @@ a {
   position: relative;
   font-size: 18px;
   line-height: 1.2em;
-  color: #222222;
+  color: #ffffff;
   font-weight: 700;
   margin-bottom: 13px;
 }
 #property-detail-box .container .property-detail-col-right .sidebar .recent-properties .widget-content .post h3 a {
-  color: #222222;
+  color: #ffffff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -2127,7 +2135,7 @@ a {
   position: relative;
   font-size: 14px;
   line-height: 24px;
-  color: #777777;
+  color: #ffffff;
   font-weight: 400;
 }
 
