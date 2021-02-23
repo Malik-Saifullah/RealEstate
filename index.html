@@ -3772,6 +3772,21 @@
     <script src="./lib/jquery/jquery-3.5.1.min.js"></script>
     <script src="./lib/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).width() >= 768) {
+                    if ($(this).scrollTop() < 150) {
+                        $(".sticky-header").hide();
+                    } else {
+                        $(".sticky-header").show();
+                    }
+                } else {
+                    $(".sticky-header").show();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

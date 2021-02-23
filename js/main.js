@@ -7,21 +7,6 @@ $(window).on('load', function () {
 
 
 
-$(function () {
-    $(window).scroll(function () {
-        if ($(window).width() >= 768) {
-            if ($(this).scrollTop() < 150) {
-                $(".sticky-header").hide();
-            } else {
-                $(".sticky-header").show();
-            }
-        } else {
-            $(".sticky-header").show();
-        }
-    });
-});
-
-
 
 $(function () { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
